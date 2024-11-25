@@ -15,11 +15,11 @@ const server = http.createServer((req, res) => {
         users.push({
             id: 1,
             name: 'Jonh Doe',
-            email: "johndoe@example.com"
+            email: "johndoe@example.com",
         })
-        return res.end("Criação de usuários")
+        return res.writeHead(201).end()
     }
-       return res.end("Hello Worldd")
+       return res.writeHead(404).end()
 })
 
 server.listen(3333)
